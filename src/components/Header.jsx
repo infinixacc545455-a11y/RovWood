@@ -39,16 +39,16 @@ export default function Header() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '14px 24px',
+          padding: '12px 16px',
         }}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <img
               src={logo}
               alt="Rov Wood"
               style={{
-                width: 50,
-                height: 50,
-                borderRadius: 12,
+                width: 44,
+                height: 44,
+                borderRadius: 10,
                 objectFit: 'cover',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
                 border: '2px solid rgba(212,160,43,0.2)',
@@ -60,10 +60,10 @@ export default function Header() {
             </div>
           </Link>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <nav style={{ display: 'flex', alignItems: 'center', gap: 32 }} className="desktop-nav">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <nav style={{ display: 'flex', alignItems: 'center', gap: 24 }} className="desktop-nav">
               {links.map((l) => (
-                <a key={l.href} href={l.href} style={{ color: 'var(--sand)', fontWeight: 500, fontSize: '0.95rem' }}>
+                <a key={l.href} href={l.href} style={{ color: 'var(--sand)', fontWeight: 500, fontSize: '0.85rem' }}>
                   {l.label}
                 </a>
               ))}
@@ -75,13 +75,13 @@ export default function Header() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 8,
+                gap: 6,
                 color: 'var(--gold-bright)',
                 fontWeight: 700,
-                fontSize: '0.8rem',
+                fontSize: '0.7rem',
                 border: '1.5px solid var(--gold-bright)',
                 borderRadius: 8,
-                padding: '6px 14px',
+                padding: '5px 12px',
                 transition: 'all 0.3s ease',
               }}
               onMouseEnter={(e) => {
@@ -91,7 +91,7 @@ export default function Header() {
                 e.currentTarget.style.background = 'transparent'
               }}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
               +20 109 188 9949
@@ -103,9 +103,9 @@ export default function Header() {
               style={{
                 background: 'rgba(245,237,224,0.08)',
                 border: '1px solid rgba(245,237,224,0.15)',
-                borderRadius: 10,
-                width: 48,
-                height: 48,
+                borderRadius: 8,
+                width: 40,
+                height: 40,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -114,10 +114,10 @@ export default function Header() {
               onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(245,237,224,0.15)'}
               onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(245,237,224,0.08)'}
             >
-              <span style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                <span style={{ width: 22, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
-                <span style={{ width: 22, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
-                <span style={{ width: 22, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
+              <span style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <span style={{ width: 18, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
+                <span style={{ width: 18, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
+                <span style={{ width: 18, height: 2, background: 'var(--sand)', borderRadius: 2, transition: 'all 0.3s ease' }} />
               </span>
             </button>
           </div>
@@ -143,7 +143,7 @@ export default function Header() {
         top: 0,
         right: 0,
         height: '100%',
-        width: 'min(340px, 85vw)',
+        width: 'min(300px, 80vw)',
         background: 'linear-gradient(180deg, #2C1810, #1A0E08)',
         zIndex: 200,
         transform: sidebarOpen ? 'translateX(0)' : 'translateX(100%)',
@@ -157,11 +157,11 @@ export default function Header() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '24px 24px',
+          padding: '20px 20px',
           borderBottom: '1px solid rgba(245,237,224,0.08)',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <img src={logo} alt="Rov Wood" style={{ width: 42, height: 42, borderRadius: 10, objectFit: 'cover' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <img src={logo} alt="Rov Wood" style={{ width: 36, height: 36, borderRadius: 8, objectFit: 'cover' }} />
             <div className="wood-logo-stacked" style={{ fontSize: '1rem' }}>
               <span className="wood-logo-rov">Rov</span>
               <span className="wood-logo-wood">Wood</span>
@@ -173,11 +173,11 @@ export default function Header() {
             style={{
               background: 'rgba(245,237,224,0.08)',
               border: 'none',
-              borderRadius: 10,
-              width: 40,
-              height: 40,
+              borderRadius: 8,
+              width: 36,
+              height: 36,
               color: 'var(--sand)',
-              fontSize: '1.5rem',
+              fontSize: '1.3rem',
               lineHeight: 1,
               transition: 'all 0.3s ease',
             }}
@@ -188,7 +188,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav style={{ display: 'flex', flexDirection: 'column', padding: '8px 0' }}>
+        <nav style={{ display: 'flex', flexDirection: 'column', padding: '4px 0' }}>
           {links.map((l) => (
             <a
               key={l.href}
@@ -197,12 +197,12 @@ export default function Header() {
               style={{
                 color: 'var(--sand)',
                 fontWeight: 600,
-                fontSize: '1.05rem',
-                padding: '18px 24px',
+                fontSize: '1rem',
+                padding: '16px 20px',
                 borderBottom: '1px solid rgba(245,237,224,0.05)',
                 display: 'flex',
                 alignItems: 'center',
-                gap: 12,
+                gap: 10,
                 transition: 'all 0.3s ease',
               }}
               onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(245,237,224,0.05)'}
@@ -213,8 +213,30 @@ export default function Header() {
           ))}
         </nav>
 
-        <div style={{ marginTop: 'auto', padding: '24px', borderTop: '1px solid rgba(245,237,224,0.08)' }}>
-          {/* تم حذف الرقم من هنا */}
+        <div style={{ marginTop: 'auto', padding: '16px 20px', borderTop: '1px solid rgba(245,237,224,0.08)' }}>
+          <a
+            href="tel:+201091889949"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
+              color: 'var(--wood-darker)',
+              fontWeight: 700,
+              fontSize: '0.85rem',
+              background: 'linear-gradient(180deg, var(--gold-bright), var(--gold))',
+              borderRadius: 8,
+              padding: '12px',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            +20 109 188 9949
+          </a>
         </div>
       </aside>
 
@@ -233,7 +255,7 @@ export default function Header() {
         }
         
         .wood-logo-rov {
-          font-size: 2rem;
+          font-size: 2.2rem;
           background: linear-gradient(180deg, #E8C84A 0%, #D4A02B 40%, #B8860B 100%);
           -webkit-background-clip: text;
           background-clip: text;
@@ -243,20 +265,35 @@ export default function Header() {
         }
         
         .wood-logo-wood {
-          font-size: 0.75rem;
+          font-size: 0.8rem;
           letter-spacing: 0.15em;
-          color: rgba(212,160,43,0.6);
-          -webkit-text-fill-color: rgba(212,160,43,0.6);
+          color: rgba(212,160,43,0.5);
+          -webkit-text-fill-color: rgba(212,160,43,0.5);
           line-height: 1;
           margin-top: 1px;
         }
         
         .wood-logo-stacked .wood-logo-rov {
-          font-size: 1.2rem;
+          font-size: 1.8rem;
         }
         
         .wood-logo-stacked .wood-logo-wood {
           font-size: 0.65rem;
+        }
+        
+        @media (max-width: 480px) {
+          .wood-logo-rov {
+            font-size: 1.8rem !important;
+          }
+          .wood-logo-wood {
+            font-size: 0.65rem !important;
+          }
+          .wood-logo-stacked .wood-logo-rov {
+            font-size: 1.5rem !important;
+          }
+          .wood-logo-stacked .wood-logo-wood {
+            font-size: 0.55rem !important;
+          }
         }
       `}</style>
     </>
