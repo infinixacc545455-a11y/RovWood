@@ -28,7 +28,7 @@ export default function Lightbox({ imageUrl, codeNumber, onClose }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 24,
+        padding: 16,
         animation: 'fadeIn 0.3s ease',
       }}
     >
@@ -37,15 +37,15 @@ export default function Lightbox({ imageUrl, codeNumber, onClose }) {
         aria-label="إغلاق المعاينة"
         style={{
           position: 'absolute',
-          top: 24,
-          left: 24,
+          top: 16,
+          left: 16,
           background: 'rgba(255,255,255,0.1)',
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255,255,255,0.1)',
           borderRadius: '50%',
-          width: 50,
-          height: 50,
-          fontSize: '1.4rem',
+          width: 40,
+          height: 40,
+          fontSize: '1.2rem',
           fontWeight: 700,
           display: 'flex',
           alignItems: 'center',
@@ -73,8 +73,8 @@ export default function Lightbox({ imageUrl, codeNumber, onClose }) {
           alt={`معاينة ${codeNumber}`}
           style={{
             maxWidth: '100%',
-            maxHeight: '75vh',
-            borderRadius: 12,
+            maxHeight: '70vh',
+            borderRadius: 10,
             boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
             border: '3px solid rgba(212,160,43,0.3)',
             objectFit: 'contain',
@@ -82,8 +82,8 @@ export default function Lightbox({ imageUrl, codeNumber, onClose }) {
         />
         <p style={{
           color: 'var(--cream)',
-          marginTop: 20,
-          fontSize: '1.1rem',
+          marginTop: 16,
+          fontSize: 'clamp(0.9rem, 1vw, 1.1rem)',
           fontWeight: 700,
           letterSpacing: '0.05em',
         }}>
