@@ -1,0 +1,332 @@
+/* ==========================================================
+   Rov Wood — Design tokens v2 (Realistic Wood Theme)
+   ========================================================== */
+:root {
+  --wood-dark: #2C1810;
+  --wood-darker: #1A0E08;
+  --wood-mid: #6B3A2A;
+  --wood-light: #8B5E3C;
+  --wood-grain: #A67B5B;
+  --sand: #F5EDE0;
+  --sand-warm: #E8DDD0;
+  --ink: #1A0E08;
+  --cream: #FCF8F2;
+  --gold: #B8860B;
+  --gold-bright: #D4A02B;
+  --gold-light: #E8C84A;
+  --shadow-warm: 0 8px 30px rgba(26, 14, 8, 0.25);
+  --shadow-deep: 0 20px 60px rgba(26, 14, 8, 0.4);
+  --font-display: 'Cairo', 'Tajawal', sans-serif;
+  --font-body: 'Tajawal', 'Cairo', sans-serif;
+  --radius-wood: 8px;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--wood-darker);
+  font-weight: 800;
+}
+
+p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== SCROLLBAR - BROWN ALWAYS ========== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-mid));
+  border-radius: 10px;
+  border: 2px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--wood-mid), var(--wood-dark));
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--wood-mid) var(--cream);
+}
+
+/* ========== REALISTIC WOOD TEXTURES ========== */
+.wood-texture-dark {
+  background-color: var(--wood-dark);
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.15) 0px,
+      rgba(0,0,0,0) 3px,
+      rgba(0,0,0,0) 60px,
+      rgba(0,0,0,0.08) 62px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(139,94,60,0.1) 0px,
+      rgba(139,94,60,0) 8px,
+      rgba(139,94,60,0) 40px,
+      rgba(139,94,60,0.06) 42px
+    ),
+    linear-gradient(180deg, #3D241A 0%, #2C1810 40%, #1A0E08 100%);
+  position: relative;
+}
+
+.wood-texture-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.02) 0px,
+      rgba(255,255,255,0) 4px,
+      rgba(255,255,255,0) 20px,
+      rgba(255,255,255,0.01) 22px
+    );
+  pointer-events: none;
+}
+
+.wood-texture-light {
+  background-color: var(--cream);
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(107,58,42,0.04) 0px,
+      rgba(107,58,42,0) 2px,
+      rgba(107,58,42,0) 50px,
+      rgba(107,58,42,0.03) 52px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(107,58,42,0.03) 0px,
+      rgba(107,58,42,0) 10px,
+      rgba(107,58,42,0) 30px,
+      rgba(107,58,42,0.02) 32px
+    );
+}
+
+/* ========== WOOD GRAIN OVERLAY ========== */
+.grain-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(139,94,60,0.03) 4px,
+      rgba(139,94,60,0.03) 5px,
+      transparent 5px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 8px,
+      rgba(107,58,42,0.02) 8px,
+      rgba(107,58,42,0.02) 9px,
+      transparent 9px,
+      transparent 30px
+    );
+  pointer-events: none;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border-radius: var(--radius-wood);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: var(--wood-darker);
+  box-shadow: 0 4px 15px rgba(184,134,11,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(184,134,11,0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--gold-bright);
+  color: var(--gold-bright);
+}
+
+.btn-outline:hover {
+  background: rgba(212,160,43,0.1);
+  transform: translateY(-3px);
+}
+
+.btn-wood {
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-mid));
+  color: var(--cream);
+  box-shadow: 0 4px 15px rgba(107,58,42,0.3);
+}
+
+.btn-wood:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(107,58,42,0.4);
+}
+
+/* ========== CARDS ========== */
+.wood-card {
+  background: var(--cream);
+  border-radius: var(--radius-wood);
+  box-shadow: var(--shadow-warm);
+  border: 1px solid rgba(139,94,60,0.12);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.wood-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-deep);
+}
+
+.wood-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--gold));
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.wood-card:hover::before {
+  opacity: 1;
+}
+
+/* ========== EYEBROW ========== */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0 12px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: '—';
+  color: var(--gold);
+  opacity: 0.5;
+  margin: 0 6px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212,160,43,0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(212,160,43,0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
