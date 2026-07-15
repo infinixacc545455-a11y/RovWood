@@ -87,12 +87,14 @@ function Hero() {
             color: 'var(--cream)',
             fontSize: 'clamp(2.4rem, 6vw, 4.8rem)',
             fontWeight: 900,
-            lineHeight: 1.1,
-            marginBottom: 20,
+            lineHeight: 1.2,
+            marginBottom: 16,
           }}>
             صناعة الكونتر
-            <br />
-            <span style={{ 
+            <br style={{ display: 'none' }} />
+            <span className="highlight" style={{ 
+              display: 'block',
+              marginTop: 8,
               background: 'linear-gradient(135deg, var(--gold-bright), var(--gold-light))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -103,6 +105,7 @@ function Hero() {
             fontSize: 'clamp(0.95rem, 1.2vw, 1.25rem)',
             maxWidth: 560,
             marginBottom: 28,
+            marginTop: 12,
             lineHeight: 1.9,
           }}>
             نصنع مسطحات الكونتر بأنواعها — سادة، فورمايكا، ميلامين، هاي جلوس —
