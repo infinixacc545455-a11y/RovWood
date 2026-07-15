@@ -71,7 +71,7 @@ img {
   display: block;
 }
 
-/* ========== SCROLLBAR - WOOD COLOR (ثابت 100%) ========== */
+/* ========== SCROLLBAR - WOOD COLOR (ثابت) ========== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -377,11 +377,11 @@ img {
     gap: 16px !important;
   }
   
-  /* ========== FOOTER - عرض (3 أعمدة جنب بعض) ========== */
+  /* ========== FOOTER - 3 أعمدة جنب بعض ========== */
   footer .container {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 16px !important;
+    gap: 12px !important;
     text-align: center !important;
   }
   
@@ -391,6 +391,20 @@ img {
   
   footer .container a {
     justify-content: center !important;
+  }
+  
+  footer .container h4 {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  footer .container a,
+  footer .container span {
+    font-size: 0.65rem !important;
+  }
+  
+  footer .container p {
+    font-size: 0.6rem !important;
   }
   
   .splash-logo {
@@ -417,10 +431,9 @@ img {
     padding: 16px !important;
   }
   
-  /* Footer - 3 أعمدة حتى في الشاشات الصغيرة جداً */
   footer .container {
     grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 12px !important;
+    gap: 8px !important;
   }
   
   footer .container > div:first-child {
@@ -428,11 +441,16 @@ img {
   }
   
   footer .container h4 {
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
   }
   
   footer .container a,
   footer .container span {
-    font-size: 0.65rem !important;
+    font-size: 0.55rem !important;
+    padding: 2px 4px !important;
+  }
+  
+  footer .container p {
+    font-size: 0.5rem !important;
   }
 }
