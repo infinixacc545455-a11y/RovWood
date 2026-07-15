@@ -213,30 +213,9 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* تم حذف رقم الهاتف من هنا */}
         <div style={{ marginTop: 'auto', padding: '16px 20px', borderTop: '1px solid rgba(245,237,224,0.08)' }}>
-          <a
-            href="tel:+201091889949"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 8,
-              color: 'var(--wood-darker)',
-              fontWeight: 700,
-              fontSize: '0.85rem',
-              background: 'linear-gradient(180deg, var(--gold-bright), var(--gold))',
-              borderRadius: 8,
-              padding: '12px',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            +20 109 188 9949
-          </a>
+          {/* فارغ - تم حذف الرقم */}
         </div>
       </aside>
 
@@ -255,7 +234,7 @@ export default function Header() {
         }
         
         .wood-logo-rov {
-          font-size: 2.2rem;
+          font-size: 2rem;
           background: linear-gradient(180deg, #E8C84A 0%, #D4A02B 40%, #B8860B 100%);
           -webkit-background-clip: text;
           background-clip: text;
@@ -265,34 +244,34 @@ export default function Header() {
         }
         
         .wood-logo-wood {
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           letter-spacing: 0.15em;
-          color: rgba(212,160,43,0.5);
-          -webkit-text-fill-color: rgba(212,160,43,0.5);
+          color: rgba(212,160,43,0.4);
+          -webkit-text-fill-color: rgba(212,160,43,0.4);
           line-height: 1;
           margin-top: 1px;
         }
         
         .wood-logo-stacked .wood-logo-rov {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
         }
         
         .wood-logo-stacked .wood-logo-wood {
-          font-size: 0.65rem;
+          font-size: 0.6rem;
         }
         
         @media (max-width: 480px) {
           .wood-logo-rov {
-            font-size: 1.8rem !important;
+            font-size: 1.6rem !important;
           }
           .wood-logo-wood {
-            font-size: 0.65rem !important;
+            font-size: 0.6rem !important;
           }
           .wood-logo-stacked .wood-logo-rov {
-            font-size: 1.5rem !important;
+            font-size: 1.3rem !important;
           }
           .wood-logo-stacked .wood-logo-wood {
-            font-size: 0.55rem !important;
+            font-size: 0.5rem !important;
           }
         }
       `}</style>
