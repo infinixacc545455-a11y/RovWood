@@ -33,65 +33,65 @@ export default function SectionPage() {
   return (
     <div className="grain-overlay">
       <Header />
-      <section className="wood-texture-dark" style={{ padding: '60px 0' }}>
+      <section className="wood-texture-dark" style={{ padding: '40px 0' }}>
         <div className="container">
           <Link to="/" style={{
             color: 'var(--gold-bright)',
-            fontSize: '0.9rem',
+            fontSize: 'clamp(0.8rem, 0.9vw, 0.9rem)',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: 8,
+            gap: 6,
             transition: 'all 0.3s ease',
           }}>
             <span>←</span> العودة للرئيسية
           </Link>
           <h1 style={{
             color: 'var(--cream)',
-            fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-            marginTop: 16,
+            fontSize: 'clamp(1.6rem, 3vw, 2.8rem)',
+            marginTop: 12,
           }}>
             {loading ? 'جاري التحميل...' : section?.name || 'قسم غير موجود'}
           </h1>
           {section?.description && (
-            <p style={{ color: 'rgba(245,237,224,0.7)', marginTop: 10, maxWidth: 600, fontSize: '1.05rem' }}>
+            <p style={{ color: 'rgba(245,237,224,0.7)', marginTop: 8, maxWidth: 600, fontSize: 'clamp(0.9rem, 1vw, 1.05rem)' }}>
               {section.description}
             </p>
           )}
         </div>
       </section>
 
-      <section className="wood-texture-light" style={{ padding: '70px 0', minHeight: '40vh' }}>
+      <section className="wood-texture-light" style={{ padding: '40px 0', minHeight: '30vh' }}>
         <div className="container">
           {!loading && codes.length === 0 && (
-            <div className="wood-card" style={{ maxWidth: 480, margin: '0 auto', padding: '60px 30px', textAlign: 'center' }}>
+            <div className="wood-card" style={{ maxWidth: 400, margin: '0 auto', padding: '40px 20px', textAlign: 'center' }}>
               <img
                 src={logo}
                 alt="Rov Wood"
                 style={{
-                  width: 80,
-                  height: 80,
+                  width: 64,
+                  height: 64,
                   borderRadius: '50%',
                   objectFit: 'cover',
-                  margin: '0 auto 16px',
+                  margin: '0 auto 12px',
                   opacity: 0.5,
                 }}
               />
-              <h3 style={{ marginBottom: 10 }}>لا توجد تصاميم بعد</h3>
-              <p style={{ color: '#6B5744' }}>سيتم إضافة التصاميم قريباً</p>
+              <h3 style={{ marginBottom: 8, fontSize: '1.1rem' }}>لا توجد تصاميم بعد</h3>
+              <p style={{ color: '#6B5744', fontSize: '0.9rem' }}>سيتم إضافة التصاميم قريباً</p>
             </div>
           )}
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: 26,
+            gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
+            gap: 16,
           }}>
             {codes.map((c, index) => (
               <div
                 key={c.id}
                 className="wood-card"
                 style={{
-                  padding: 16,
+                  padding: 12,
                   textAlign: 'center',
                   animationDelay: `${index * 0.05}s`,
                 }}
@@ -100,7 +100,7 @@ export default function SectionPage() {
                   borderRadius: 6,
                   overflow: 'hidden',
                   aspectRatio: '1/1',
-                  marginBottom: 14,
+                  marginBottom: 10,
                   background: '#eee',
                   border: '2px solid rgba(139,94,60,0.08)',
                 }}>
@@ -117,13 +117,13 @@ export default function SectionPage() {
                     onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   />
                 </div>
-                <p style={{ fontWeight: 700, marginBottom: 12, color: 'var(--wood-darker)', fontSize: '1rem' }}>
+                <p style={{ fontWeight: 700, marginBottom: 8, color: 'var(--wood-darker)', fontSize: 'clamp(0.85rem, 0.9vw, 1rem)' }}>
                   {c.code_number}
                 </p>
                 <button
                   onClick={() => setActiveImage(c)}
                   className="btn btn-primary"
-                  style={{ padding: '10px 20px', fontSize: '0.85rem', width: '100%' }}
+                  style={{ padding: '8px 16px', fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', width: '100%' }}
                 >
                   معاينة المنتج
                 </button>
