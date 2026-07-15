@@ -8,7 +8,7 @@ export default function Footer() {
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
         gap: 24,
       }}>
-        {/* العمود الأول - عرض كامل على الموبايل */}
+        {/* العمود الأول */}
         <div style={{ textAlign: 'center' }}>
           <div style={{
             fontFamily: 'var(--font-display)',
@@ -44,7 +44,7 @@ export default function Footer() {
           </p>
         </div>
         
-        {/* العمود الثاني - روابط سريعة */}
+        {/* العمود الثاني */}
         <div style={{ textAlign: 'center' }}>
           <h4 style={{ color: 'var(--gold-bright)', fontSize: 'clamp(0.85rem, 0.95vw, 1rem)', marginBottom: 10 }}>روابط سريعة</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center' }}>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* العمود الثالث - تواصل معنا */}
+        {/* العمود الثالث */}
         <div style={{ textAlign: 'center' }}>
           <h4 style={{ color: 'var(--gold-bright)', fontSize: 'clamp(0.85rem, 0.95vw, 1rem)', marginBottom: 10 }}>تواصل معنا</h4>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center' }}>
