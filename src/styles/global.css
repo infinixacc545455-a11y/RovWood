@@ -71,28 +71,28 @@ img {
   display: block;
 }
 
-/* ========== SCROLLBAR - DARK BROWN (ثابت 100%) ========== */
+/* ========== SCROLLBAR - WOOD COLOR (ثابت 100%) ========== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1A0E08 !important;
+  background: #2C1810 !important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6B3A2A !important;
+  background: #8B5E3C !important;
   border-radius: 10px;
-  border: 2px solid #1A0E08 !important;
+  border: 2px solid #2C1810 !important;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8B5E3C !important;
+  background: #A67B5B !important;
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #6B3A2A #1A0E08;
+  scrollbar-color: #8B5E3C #2C1810;
 }
 
 /* ========== REALISTIC WOOD TEXTURES ========== */
@@ -377,16 +377,16 @@ img {
     gap: 16px !important;
   }
   
-  /* Footer - عرض (صفوف جنب بعض) */
+  /* ========== FOOTER - عرض (3 أعمدة جنب بعض) ========== */
   footer .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 20px !important;
-    text-align: center;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 16px !important;
+    text-align: center !important;
   }
   
   footer .container > div:first-child {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1 !important;
   }
   
   footer .container a {
@@ -417,8 +417,22 @@ img {
     padding: 16px !important;
   }
   
+  /* Footer - 3 أعمدة حتى في الشاشات الصغيرة جداً */
   footer .container {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  
+  footer .container > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+  
+  footer .container h4 {
+    font-size: 0.75rem !important;
+  }
+  
+  footer .container a,
+  footer .container span {
+    font-size: 0.65rem !important;
   }
 }
