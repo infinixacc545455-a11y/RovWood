@@ -71,28 +71,28 @@ img {
   display: block;
 }
 
-/* ========== SCROLLBAR - DARK BROWN ========== */
+/* ========== SCROLLBAR - DARK BROWN (ثابت) ========== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--cream);
+  background: #2C1810 !important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--wood-dark), var(--wood-darker));
+  background: linear-gradient(180deg, #8B5E3C, #6B3A2A) !important;
   border-radius: 10px;
-  border: 2px solid var(--cream);
+  border: 2px solid #2C1810 !important;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--wood-darker);
+  background: #6B3A2A !important;
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--wood-dark) var(--cream);
+  scrollbar-color: #6B3A2A #2C1810;
 }
 
 /* ========== REALISTIC WOOD TEXTURES ========== */
@@ -320,7 +320,7 @@ img {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* ========== RESPONSIVE - MOBILE FIRST ========== */
+/* ========== RESPONSIVE - MOBILE ========== */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
@@ -352,13 +352,11 @@ img {
     font-size: 0.65rem;
   }
   
-  /* Cards grid */
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
   
-  /* Hero section */
   .hero-section {
     min-height: 70vh !important;
     padding: 40px 0 !important;
@@ -366,34 +364,43 @@ img {
   
   .hero-title {
     font-size: clamp(2rem, 7vw, 2.8rem) !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-title br {
+    display: none;
+  }
+  
+  .hero-title .highlight {
+    display: block;
+    margin-top: 4px;
   }
   
   .hero-description {
     font-size: 0.95rem !important;
   }
   
-  /* Sections grid */
   .sections-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
   
-  /* Footer */
+  /* Footer - عرض */
   footer .container {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
     text-align: center;
   }
   
-  footer .container > div:last-child {
-    text-align: center;
+  footer .container > div:first-child {
+    grid-column: 1 / -1;
   }
   
   footer .container a {
     justify-content: center !important;
   }
   
-  /* Splash Screen */
   .splash-logo {
     width: 100px !important;
     height: 100px !important;
@@ -416,5 +423,10 @@ img {
   
   .wood-card {
     padding: 16px !important;
+  }
+  
+  footer .container {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
   }
 }
